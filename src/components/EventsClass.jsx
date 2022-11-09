@@ -22,6 +22,10 @@ export class EventsClass extends Component {
         })
     }
 
+    greatMe(name) {
+        alert('Hello!!' + name)
+    }
+
     render() {
         return(
             <>
@@ -31,6 +35,7 @@ export class EventsClass extends Component {
                     <button onClick={this.restar}>-</button>
                 </nav>
                 <span>{this.state.counter}</span>
+                <button onClick={() => this.greatMe('Alex')}>Great me!!</button>
             </>
         )
     }
