@@ -7,11 +7,18 @@ export class EventsClass extends Component {
             counter: 0
         }
         this.sumar = this.sumar.bind(this);
+        this.restar = this.restar.bind(this);
     }
 
     sumar() {
         this.setState({
             counter: this.state.counter + 1
+        })
+    }
+
+    restar() {
+        this.setState({
+            counter: this.state.counter - 1
         })
     }
 
@@ -21,7 +28,7 @@ export class EventsClass extends Component {
                 <h2>Soy EventsClass!</h2>
                 <nav>
                     <button onClick={this.sumar}>+</button>
-                    <button>-</button>
+                    <button onClick={this.restar}>-</button>
                 </nav>
                 <span>{this.state.counter}</span>
             </>
