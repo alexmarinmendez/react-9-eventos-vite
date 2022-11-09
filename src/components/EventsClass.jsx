@@ -2,10 +2,13 @@ import { Component } from "react";
 
 export class EventsClass extends Component {
     constructor() {
-        super()
         this.state = {
             counter: 0
         }
+    }
+
+    sumar() {
+        console.log('Estoy sumando...')
     }
 
     render() {
@@ -13,7 +16,7 @@ export class EventsClass extends Component {
             <>
                 <h2>Soy EventsClass!</h2>
                 <nav>
-                    <button>+</button>
+                    <button onClick={this.sumar}>+</button>
                     <button>-</button>
                 </nav>
                 <span>{this.state.counter}</span>
