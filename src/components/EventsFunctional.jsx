@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EventsFunctional = () => {
+const EventsFunctional = (props) => {
     const [counter, setCounter] = useState(0);
 
     const sumar = () => {
@@ -11,10 +11,6 @@ const EventsFunctional = () => {
         setCounter(counter - 1)
     }
 
-    const greatMe = (name) => {
-        alert('Hello!!' + name)
-    }
-
     return(
         <>
             <h2>Soy EventsFunctional</h2>
@@ -23,7 +19,7 @@ const EventsFunctional = () => {
                 <button onClick={restar}>-</button>
             </nav>
             <span>{counter}</span>
-            <button onClick={() => greatMe('Alex')}>Great me!!</button>
+            <button onClick={() => props.greatMe('Alex')}>Great me!!</button>
         </>
     )
 }
